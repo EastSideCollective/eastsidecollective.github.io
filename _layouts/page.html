@@ -1,40 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-    <nav class="navbar">
-        <img src="{{ '/assets/images/eastsidecollective.png' | relative_url }}" alt="Logo">
-        <div class="menu" id="menu">
-            <a class="caption" href="{{ '/' | relative_url }}">Home</a>
-            <a class="caption" href="{{ '/about' | relative_url }}">About</a>
-            <a class="caption" href="{{ '/contact' | relative_url }}">Contact</a>
-        </div>
-        <div class="toggle" id="toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-    <main class="content">
-        {{ content }}
-    </main>
-    <footer class="footer">
-      <a class="caption" href="{{ '/privacy-policy' | relative_url }}">Privacy Policy</a>
-      <a class="caption" href="{{ '/terms' | relative_url }}">Terms of Service</a>
-    </footer>
-    <script>
-        const toggle = document.getElementById('toggle');
-        const menu = document.getElementById('menu');
-
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+  <nav class="navbar">
+    <img src="{{ '/assets/images/eastsidecollective.png' | relative_url }}" alt="Logo">
+    <div class="menu" id="menu">
+      <a class="caption" href="{{ '/' | relative_url }}">Home</a>
+      <a class="caption" href="{{ '/about' | relative_url }}">About</a>
+      <a class="caption" href="{{ '/contact' | relative_url }}">Contact</a>
+    </div>
+  </nav>
+  <main class="content">
+    {{ content }}
+  </main>
+  <footer class="footer">
+    <a class="caption" href="{{ '/privacy-policy' | relative_url }}">Privacy Policy</a>
+    <a class="caption" href="{{ '/terms' | relative_url }}">Terms of Service</a>
+  </footer>
 </body>
 </html>
