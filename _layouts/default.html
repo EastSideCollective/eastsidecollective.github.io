@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #0366d6;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+        .navbar a:hover {
+            background-color: #0053ba;
+        }
+        .navbar .menu {
+            display: flex;
+            gap: 1rem;
+        }
+        .navbar .toggle {
+            display: none;
+            flex-direction: column;
+            gap: 0.3rem;
+            cursor: pointer;
+        }
+        .navbar .toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+        }
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar .menu.active {
+                display: flex;
+            }
+            .navbar .toggle {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <div class="menu" id="menu">
+            <a href="{{ '/about' | relative_url }}">About</a>
+            <a href="{{ '/contact' | relative_url }}">Contact</a>
+            <!-- Add more links as needed -->
+        </div>
+        <div class="toggle" id="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <main>
+        {{ content }}
+    </main>
+    <script>
+        const toggle = document.getElementById('toggle');
+        const menu = document.getElementById('menu');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
