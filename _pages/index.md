@@ -1,6 +1,7 @@
 ---
 layout: default
 title: East Side Collective
+permalink: /
 ---
 
 # East Side Collective
