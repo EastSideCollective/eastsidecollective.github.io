@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Home
+title: East Side Collective
 ---
 
-# Welcome to My GitHub Pages Site
+# East Side Collective
 
-This is a sample homepage using the Cayman theme.
+East Side Collective is a community driven organization that helps east siders get together and build relationships through events, sports, news, and coworking.
