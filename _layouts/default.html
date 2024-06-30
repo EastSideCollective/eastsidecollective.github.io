@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .navbar {
             display: flex;
@@ -40,6 +41,10 @@
             height: 3px;
             background-color: white;
         }
+        .navbar img {
+            max-height: 40px;
+            margin-right: 1rem;
+        }
         @media (max-width: 768px) {
             .navbar .menu {
                 display: none;
@@ -53,11 +58,40 @@
                 display: flex;
             }
         }
+        .hero {
+            position: relative;
+            /* background: url('{{ '/assets/images/hero-background.jpg' | relative_url }}') no-repeat center center/cover; */
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        .hero-buttons a {
+            padding: 0.5rem 1rem;
+            background-color: #0366d6;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .hero-buttons a:hover {
+            background-color: #0053ba;
+        }
+        .content {
+            padding: 2rem;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/images/eastsidecollective.png' | relative_url }}" alt="Logo">
+        </a>
         <div class="menu" id="menu">
             <a href="{{ '/about' | relative_url }}">About</a>
             <a href="{{ '/contact' | relative_url }}">Contact</a>
@@ -69,7 +103,13 @@
             <span></span>
         </div>
     </nav>
-    <main>
+    <header class="hero">
+        <div class="hero-buttons">
+            <a href="#">Button 1</a>
+            <a href="#">Button 2</a>
+        </div>
+    </header>
+    <main class="content">
         {{ content }}
     </main>
     <script>
