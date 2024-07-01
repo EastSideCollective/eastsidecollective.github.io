@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
-  <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <style>
@@ -35,9 +35,6 @@
     .hero-buttons a:hover {
       border: 2px solid darkgreen;
     }
-    .default-content {
-      background: #FFFFF0;
-    }
   </style>
 </head>
 <body>
@@ -54,7 +51,7 @@
       <a class="button" href="mailto:kyle@eastsidecollective.io">Inquire About Membership</a>
     </div>
   </header>
-  <main class="content default-content">
+  <main class="content">
     {{ content }}
   </main>
   <footer class="footer">
