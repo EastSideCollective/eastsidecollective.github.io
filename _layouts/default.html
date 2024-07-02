@@ -10,8 +10,7 @@
   <style>
     .hero {
       position: relative;
-      /* background: url('{{ '/assets/images/hero-background.jpg' | relative_url }}') no-repeat center center/cover; */
-      height: 400px;
+      height: 350px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,11 +22,26 @@
       color: black;
     }
     .hero-buttons {
+      position: relative;
       display: flex;
       gap: 1rem;
     }
+    .hero:hover .lilmonster {
+      animation: rise 0.5s ease forwards;
+      animation-play-state: running;
+    }
+    .lilmonster {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      animation: drop 0.5s ease forwards;
+      animation-play-state: running;
+      bottom: 0;
+      right: 5px;
+      height: 30px;
+    }
     .hero-buttons a {
-      background-color: transparent;
+      background-color: white;
       color: forestgreen;
       text-decoration: none;
       border: 2px solid forestgreen
@@ -35,21 +49,35 @@
     .hero-buttons a:hover {
       border: 2px solid darkgreen;
     }
+    @keyframes rise {
+      from {
+        top: 0; /* Start position */
+      }
+      to {
+        top: -15px; /* Final position */
+      }
+    }
+    @keyframes drop {
+      from {
+        top: -15px; /* Start position */
+      }
+      to {
+        top: 0; /* Final position */
+      }
+    }
   </style>
 </head>
 <body>
   <nav class="navbar">
     <img src="{{ '/assets/images/eastsidecollective.png' | relative_url }}" alt="Logo">
-    <div class="menu" id="menu">
-      <a class="caption" href="{{ '/about' | relative_url }}">About</a>
-      <a class="caption" href="{{ '/contact' | relative_url }}">Contact</a>
-    </div>
   </nav>
   <header class="hero">
     <h1 class="hero-text">East Side Collective</h1>
     <div class="hero-buttons">
+      <img class="lilmonster" src="{{ '/assets/images/lilmonster.png' | relative_url }}" alt="monster">
       <a class="button" href="mailto:kyle@eastsidecollective.io">Inquire About Membership</a>
     </div>
+    <h4 class="hero-text">LA based social collective for like minds on the east side</h4>
   </header>
   <main class="content">
     {{ content }}

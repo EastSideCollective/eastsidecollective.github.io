@@ -4,6 +4,9 @@ body {
   padding: 0;
   color: black;
 }
+/* .content {
+  min-height: 100vh;
+} */
 .subtitle {
   font-size: 1rem;
   font-weight: 500;
@@ -58,20 +61,23 @@ body {
   margin-right: 1rem;
 }
 .content {
-  padding: 2rem 0 0 0;
+  padding: 0;
 }
 .section {
   display: flex;
-  align-items: center;
-  padding: 2rem 0;
+  /* align-items: center; */
+  padding: 0;
+  border-top: 1px solid black;
 }
 .section:nth-child(odd) {
-  flex-direction: row-reverse;
   background: #FFFFF0;
 }
-.section-content {
+.section-item {
   flex: 1;
-  padding: 1rem;
+  padding: .5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid black;
 }
 .section-image {
   position: relative;
