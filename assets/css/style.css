@@ -79,25 +79,8 @@ body {
   flex-direction: column;
   border-right: 1px solid black;
 }
-.section-image {
-  position: relative;
-}
-.section-image img {
-  max-width: 200px;
-  border-radius: 25px;
-  position: relative;
-  height: auto;
-  flex: 1;
-  padding: 1rem;
-  z-index: 1;
-}
-.shader {
-  height: 200px;
-  position: absolute;
-  width: 180px;
-  background: rgba(173, 245, 125, 0.4);
-  border-radius: 25px;
-  top: 0;
+.section-item p {
+  margin: 0;
 }
 @media (max-width: 768px) {
   .section {
