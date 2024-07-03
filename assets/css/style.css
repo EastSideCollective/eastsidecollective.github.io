@@ -74,7 +74,7 @@ body {
 }
 .section-item {
   flex: 1;
-  padding: .5rem 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   border-right: 1px solid black;
